@@ -5,8 +5,7 @@
     <title>Profile Page</title>
     <style type="text/css">
         <?php include 'design.css'; ?>
-    </style>
-</head>
+    </style></head>
 
     <body>
         <header>
@@ -42,12 +41,12 @@
                 </div>
 
                 <div class="main-info">
+                    <img src="https://s-media-cache-ak0.pinimg.com/736x/84/a8/bd/84a8bd9619648b1c67e72a7b4a5d06df.jpg">
                     <table>
-                        <tr>
-                            <td>
-                                <img src="https://s-media-cache-ak0.pinimg.com/736x/84/a8/bd/84a8bd9619648b1c67e72a7b4a5d06df.jpg">
-                            </td>
-                        </tr>
+<!--                        <tr>-->
+<!--                            <td>-->
+<!--                            </td>-->
+<!--                        </tr>-->
                         <tr>
                             <td class="field-name">Name: </td>
                             <td class="field-value">Anna</td>
