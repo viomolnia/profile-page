@@ -69,6 +69,7 @@ header a:hover {
     width:220px;
     height: 220px;
     float:left;
+    margin-right: 10px;
 }
 
 .advertising {
@@ -148,7 +149,6 @@ header a:hover {
 @media only screen and (max-width: 1200px) {
     .main-info tr {
         font-family: Chiller;
-        margin:5px;
         font-size:30px;
     }
 }
