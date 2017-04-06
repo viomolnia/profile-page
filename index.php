@@ -13,8 +13,8 @@
             <a href="index.php">Profile</a>
         </header>
 
-        <div class="main">
-            <div class="advertising">
+        <article>
+            <aside>
                 <ul>
                     <li>
                         <div class="title">Ut dui massa, vulputate sit amet pharetra ac!</div>
@@ -37,10 +37,10 @@
                         <div><a href="#">Mauris nulla dui, sodales sodales libero ac, faucibus accumsan felis.</a></div>
                     </li>
                 </ul>
-            </div>
+            </aside>
 
-            <div class="main-info">
-                <img src="https://s-media-cache-ak0.pinimg.com/736x/84/a8/bd/84a8bd9619648b1c67e72a7b4a5d06df.jpg">
+            <section>
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/84/a8/bd/84a8bd9619648b1c67e72a7b4a5d06df.jpg" alt="Profile Picture is not available now">
                 <table>
                     <tr>
                         <td class="field-name">Name: </td>
@@ -72,12 +72,12 @@
                         <td class="field-value">Music, Reading, Sport</td>
                     </tr>
                 </table>
-            </div>
+            </section>
 
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
+        </article>
 
-        <div class="footer">
+        <footer>
             <table>
                 <tr>
                     <td><h3>Main</h3></td>
@@ -109,6 +109,6 @@
                     <td><a href="#">Aliquam ultrices</a></td>
                 </tr>
             </table>
-        </div>
+        </footer>
     </body>
 </html>

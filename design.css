@@ -34,52 +34,52 @@ header a:hover {
     color: #800080;
 }
 
-.main {
+article {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.main-info {
+section {
     height: 70vh;
     line-height: 1;
     background-color: #ccccff;
 }
 
-.main-info tr {
+section tr {
     font-family: Chiller, serif;
     margin:5px;
     font-size:40px;
 }
 
-.main-info td {
+section td {
     padding-bottom: 0.5em;
 }
 
-.main-info .field-name {
+section .field-name {
     font-weight: bold;
     color:#000000;
 }
 
-.main-info .field-value {
+section .field-value {
     color: #800080;
 }
 
-.main-info img{
+section img{
     width:220px;
     height: 220px;
     float:left;
     margin-right: 10px;
 }
 
-.advertising {
+aside {
     background-color: #ffccff;
     width: 350px;
     float: right;
     background-size: cover;
 }
 
-.advertising ul {
+aside ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -88,20 +88,20 @@ header a:hover {
     list-style: none;
 }
 
-.advertising .title{
+aside .title{
     color:#800080;
     font-weight: bold;
     line-height: 1.3;
     text-decoration: none;
 }
 
-.advertising a{
+aside a{
     font-weight: bold;
     font-size: 12px;
     color: #000000;
 }
 
-.footer table {
+footer table {
     width: 100%;
     height: 20vh;
     line-height:2;
@@ -110,7 +110,7 @@ header a:hover {
     float:left;
 }
 
-.footer table h3{
+footer table h3{
     font-weight:bold;
     padding-right:-30px;
     display: flex;
@@ -119,11 +119,11 @@ header a:hover {
     text-decoration: none;
 }
 
-.footer table tr {
+footer table tr {
     width:33.333%;
 }
 
-.footer table a{
+footer table a{
     color: #000000;
     display: flex;
     justify-content: space-around;
@@ -147,20 +147,20 @@ header a:hover {
 }
 
 @media only screen and (max-width: 1200px) {
-    .main-info tr {
+    section tr {
         font-family: Chiller, serif;
         font-size:30px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
-    .advertising {
+    aside {
         display: none;
     }
 }
 
 @media only screen and (max-width: 300px) {
-    .main-info img {
+    section img {
         display: none;
     }
 }
