@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 * {
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
 }
 
 iframe {
@@ -19,7 +19,7 @@ header a{
     width: 100%;
     height: 10vh;
     font-size: 100px;
-    font-family: Chiller;
+    font-family: Chiller, serif;
     color: #000000;
     font-weight: bolder;
     text-align: center;
@@ -47,7 +47,7 @@ header a:hover {
 }
 
 .main-info tr {
-    font-family: Chiller;
+    font-family: Chiller, serif;
     margin:5px;
     font-size:40px;
 }
@@ -69,6 +69,7 @@ header a:hover {
     width:220px;
     height: 220px;
     float:left;
+    margin-right: 10px;
 }
 
 .advertising {
@@ -128,13 +129,13 @@ header a:hover {
     justify-content: space-around;
 }
 
-@media only screen and (max-height: 1000px) {
+@media only screen and (max-height: 1200px) {
 
     header a{
         width: 100%;
         height: 10vh;
-        font-size: 70px;
-        font-family: Chiller;
+        font-size: 60px;
+        font-family: Chiller, serif;
         color: #000000;
         font-weight: bolder;
         text-align: center;
@@ -147,8 +148,7 @@ header a:hover {
 
 @media only screen and (max-width: 1200px) {
     .main-info tr {
-        font-family: Chiller;
-        margin:5px;
+        font-family: Chiller, serif;
         font-size:30px;
     }
 }
