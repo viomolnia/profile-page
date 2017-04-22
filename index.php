@@ -110,5 +110,39 @@
                 </tr>
             </table>
         </footer>
+
+        <form action="http://localhost:8080/form.php?test=GET_PARAM" method="post">
+            <br><br>
+            <label for="name">
+                <span>Name: </span>
+                <input type = "text" class="input-field" name="name" value=""/>
+            </label><br><br>
+
+            <label for="score">
+                <span>Score: </span>
+                <select>
+                    <option name="score" value="1">1</option>
+                    <option name="score" value="2">2</option>
+                    <option name="score" value="3">3</option>
+                    <option name="score" value="4">4</option>
+                    <option name="score" value="5">5</option>
+                </select>
+            </label><br><br>
+
+            <label for="friend">
+                <span>Common friend: </span><br>
+                <input name="friend" type="radio" value="Vivamus Convallis">Vivamus Convallis</p>
+                <input name="friend" type="radio" value="Cras Tempor">Cras Tempor</p>
+                <input name="friend" type="radio" value="Maecenas Cursus" checked>Maecenas Cursus</p>
+            </label><br><br>
+
+            <label for="comment">
+                <span>Comment: </span>
+                <textarea name="comment"></textarea><br>
+            </label><br><br>
+
+            <input type="submit"/>
+            <input type="reset"/>
+        </form>
     </body>
 </html>

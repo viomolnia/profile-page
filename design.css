@@ -129,6 +129,15 @@ footer table a{
     justify-content: space-around;
 }
 
+form {
+    padding: 20px;
+}
+
+form span {
+    color: #800080;
+    font-weight: bold;
+}
+
 @media only screen and (max-height: 1200px) {
 
     header a{
