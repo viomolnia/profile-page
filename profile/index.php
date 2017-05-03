@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+    require_once __DIR__ . '/../vendor/autoload.php';
+    use classes\User;
+?>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,25 +21,61 @@
         <article>
             <aside>
                 <ul>
+
+<!--                    --><?php
+//                        $users = [];
+//                        $users[] = new User('Name1 Surname1', 30, 'programmer', 'profileLink-1');
+//                        $users[] = new User('Name2 Surname2', 31, 'architect', 'profileLink-2');
+//                        $users[] = new User('Name3 Surname3', 32, 'tester', 'profileLink-3');
+//                        $users[] = new User('Name4 Surname4', 33, 'manager', 'profileLink-4');
+//                        $users[] = new User('Name5 Surname5', 34, 'designer', 'profileLink-5');
+//
+//                        foreach ($users as $user) { ?>
+<!--                            <li>-->
+<!--                                <div class="title">--><?php //echo $user -> getName() ?><!--</div>-->
+<!--                                <div><a href="#">aaa</a></div>-->
+<!--                            </li>-->
+<!--                        --><?//} ?>
+
                     <li>
-                        <div class="title">Ut dui massa, vulputate sit amet pharetra ac!</div>
-                        <div><a href="#">Mauris eget justo odio. Nunc vel bibendum mauris. </a></div>
+                        <div class="title"><?php $user = new User('Name1 Surname1', 30, 'programmer', 'profileLink-1');
+                                            echo $user -> getName() ?></div>
+                        <div><a href="#"><?php echo 'Age: '.$user -> getAge().
+                                                    '; Profession: '.$user -> getProfession().
+                                                    '; Profile link: '.$user -> getLink()
+                                        ?></a></div>
                     </li>
                     <li>
-                        <div class="title">Nullam euismod lacinia sem, ut egestas mi!</div>
-                        <div><a href="#">Sed et metus in tellus faucibus fringilla sed vitae magna.</a></div>
+                        <div class="title"><?php $user = new User('Name2 Surname2', 31, 'architect', 'profileLink-2');
+                            echo $user -> getName() ?></div>
+                        <div><a href="#"><?php echo 'Age: '.$user -> getAge().
+                                                    '; Profession: '.$user -> getProfession().
+                                                    '; Profile link: '.$user -> getLink()
+                                        ?></a></div>
                     </li>
                     <li>
-                        <div class="title">Ut at neque ac diam vulputate tincidunt!</div>
-                        <div><a href="#">Quisque augue massa, semper sed libero ac, ultrices sodales ligula.</a></div>
+                        <div class="title"><?php $user = new User('Name3 Surname3', 32, 'tester', 'profileLink-3');
+                            echo $user -> getName() ?></div>
+                        <div><a href="#"><?php echo 'Age: '.$user -> getAge().
+                                                    '; Profession: '.$user -> getProfession().
+                                                    '; Profile link: '.$user -> getLink()
+                                        ?></a></div>
                     </li>
                     <li>
-                        <div class="title">Nunc feugiat felis et quam eleifend!</div>
-                        <div><a href="#">Vivamus sed fringilla risus. Integer vel neque at ex feugiat commodo.</a></div>
+                        <div class="title"><?php $user = new User('Name4 Surname4', 33, 'manager', 'profileLink-4');
+                            echo $user -> getName() ?></div>
+                        <div><a href="#"><?php echo 'Age: '.$user -> getAge().
+                                                    '; Profession: '.$user -> getProfession().
+                                                    '; Profile link: '.$user -> getLink()
+                                        ?></a></div>
                     </li>
                     <li>
-                        <div class="title">Suspendisse justo nibh, varius nec lectus!</div>
-                        <div><a href="#">Mauris nulla dui, sodales sodales libero ac, faucibus accumsan felis.</a></div>
+                        <div class="title"><?php $user = new User('Name5 Surname5', 34, 'designer', 'profileLink-5');
+                            echo $user -> getName() ?></div>
+                        <div><a href="#"><?php echo 'Age: '.$user -> getAge().
+                                                    '; Profession: '.$user -> getProfession().
+                                                    '; Profile link: '.$user -> getLink()
+                                        ?></a></div>
                     </li>
                 </ul>
             </aside>
