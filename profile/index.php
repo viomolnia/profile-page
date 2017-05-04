@@ -186,4 +186,5 @@
             <input type="reset"/>
         </form>
     </body>
+    <?php include __DIR__ . '/../templates/homepage.twig';?>
 </html>
