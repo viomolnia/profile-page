@@ -150,11 +150,18 @@ use classes\User;
 
         <form action="http://localhost:8080/form.php?test=GET_PARAM" method="post">
             <br><br>
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Name: </label>
                 <div class="col-sm-10">
                     <label for="focusedInput"></label><input name="name" class="form-control" id="focusedInput" type="text">
                 </div>
+            </div>-->
+
+            <div class="form-group">
+                <span for="name">Name: </span>
+                <label>
+                    <input name="name" type="text" class="form-control">
+                </label>
             </div>
 
             <label for="score">
@@ -175,24 +182,16 @@ use classes\User;
                 <input name="friend" type="radio" value="Maecenas Cursus" checked>Maecenas Cursus<br>
             </label><br><br>
 
-            <div class="form-group has-success has-feedback">
-                <label class="col-sm-2 control-label" for="inputSuccess">
-                    Comment: </label>
-                <div class="col-sm-10">
-                    <input name="comment" type="text" class="form-control" id="inputSuccess">
-                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
-                </div>
+            <div class="form-group">
+                <span for="comment">Comment:</span>
+                <label>
+                    <textarea name="comment" class="form-control" rows="5"></textarea>
+                </label>
             </div>
 
-<!--            <label for="comment">-->
-<!--                <span>Comment: </span>-->
-<!--                <textarea name="comment"></textarea><br>-->
-<!--            </label><br><br>-->
-
-<!--            <input type="submit"/>-->
             <input type="submit" class="btn btn-info" value="Submit">
             <input class="btn btn-primary" type="reset" value="Reset">
-<!--            <input type="reset"/>-->
+
         </form>
     </body>
 </html>
