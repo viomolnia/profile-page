@@ -8,7 +8,6 @@ use classes\User;
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Profile Page</title>
-    <!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -148,15 +147,8 @@ use classes\User;
             </div>
         </div>
 
-        <form action="http://localhost:8080/form.php?test=GET_PARAM" method="post">
+        <form action="http://localhost:8081/feedback_form.php?test=GET_PARAM" method="post">
             <br><br>
-            <!--<div class="form-group">
-                <label for="name" class="col-sm-2 control-label">Name: </label>
-                <div class="col-sm-10">
-                    <label for="focusedInput"></label><input name="name" class="form-control" id="focusedInput" type="text">
-                </div>
-            </div>-->
-
             <div class="form-group">
                 <span for="name">Name: </span>
                 <label>
@@ -191,7 +183,46 @@ use classes\User;
 
             <input type="submit" class="btn btn-info" value="Submit">
             <input class="btn btn-primary" type="reset" value="Reset">
+        </form>
 
+        <form action="http://localhost:8082/registration_form.php?test=GET_PARAM" name="frmRegistration" method="post">
+            <table border="0" width="500" align="center" class="demo-table">
+                <tr>
+                    <td>Username: </td>
+                    <td><input type="text" class="demoInputBox" name="username" value="<?php if(isset($_POST['userName'])) echo $_POST['userName']; ?>"></td>
+                </tr>
+                <tr>
+                    <td>First name: </td>
+                    <td><input type="text" class="demoInputBox" name="firstname" value="<?php if(isset($_POST['firstName'])) echo $_POST['firstName']; ?>"></td>
+                </tr>
+                <tr>
+                    <td>Last name: </td>
+                    <td><input type="text" class="demoInputBox" name="lastname" value="<?php if(isset($_POST['lastName'])) echo $_POST['lastName']; ?>"></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" class="demoInputBox" name="password" value=""></td>
+                </tr>
+                <tr>
+                    <td>Confirm password: </td>
+                    <td><input type="password" class="demoInputBox" name="confirmPassword" value=""></td>
+                </tr>
+            </table>
+            <input type="submit" name="register-user" value="Register" class="btnRegister">
+        </form>
+
+        <form action="http://localhost:8083/login_form.php?test=GET_PARAM" name="frmRegistration" method="post">
+            <table border="0" width="500" align="center" class="demo-table">
+                <tr>
+                    <td>Username: </td>
+                    <td><input type="text" class="demoInputBox" name="username" value="<?php if(isset($_POST['userName'])) echo $_POST['userName']; ?>"></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" class="demoInputBox" name="password" value=""></td>
+                </tr>
+            </table>
+            <input type="submit" name="register-user" value="Log in" class="btnRegister">
         </form>
     </body>
 </html>
