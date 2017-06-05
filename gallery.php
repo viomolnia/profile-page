@@ -1,4 +1,6 @@
 <?php
+include "profile/UserRole.php";
+
 session_start();
 $fo = opendir("profile/gallery/img");
 if (array_key_exists('delete_file', $_POST)) {
@@ -17,7 +19,7 @@ while ($file = readdir($fo)) {
 
         echo '<form method="post">';
         echo '<input type="hidden" value="'.$file.'" name="delete_file" />';
-        if ($_SESSION["username"] == "admin") echo '<input type="submit" value="Delete image" />';
+        if ($_SESSION["role"] == UserRole::$ADMIN) echo '<input type="submit" value="Delete image" />';
         echo '</form>';
     }
 
