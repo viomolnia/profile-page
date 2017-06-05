@@ -1,7 +1,7 @@
 Homework-1: profile page (html + css) <br>
 
 1. Run profile-page: <br>
-php -S localhost:8080 profile/index.php <br>
+php -S localhost:8080 profile/profile_main <br>
 
 2. Run feedback form: <br>
 php -S localhost:8081 profile/feedback_form.php <br>
@@ -16,4 +16,4 @@ php -S localhost:8083 profile/login_form.php <br>
 php -S localhost:8084 profile/logout_form.php <br>
 
 6. Run gallery: <br>
-php -S localhost:8085 profile/gallery_main.php <br>
+php -S localhost:8085 -d ./ <br>
