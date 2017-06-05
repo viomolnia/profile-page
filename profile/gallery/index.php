@@ -3,8 +3,8 @@
         <table width="744" border="1">
             <tr>
                 <th height="41" scope="row">
-                    <a href="gallery_main.php?option=upload" style="margin-left:100px">Upload image</a>
-                    <a href="gallery_main.php?option=gallery" style="margin-left:100px">Image gallery</a>
+                    <a href="index.php?option=upload" style="margin-left:100px">Upload image</a>
+                    <a href="index.php?option=gallery" style="margin-left:100px">Image gallery</a>
                 </th>
             </tr>
             <tr>
