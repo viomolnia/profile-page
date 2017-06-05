@@ -21,7 +21,7 @@ use classes\User;
 
         <div id="header" class="row">
             <div class="col-lg-12">
-                <a href="index.php">Profile</a>
+                <a href="../index.php">Profile</a>
             </div>
         </div>
 

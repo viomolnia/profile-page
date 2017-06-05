@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['upd'])) {
-    if (file_exists("profile/gallery/" . $_FILES['file']['name'])) {
+    if (file_exists("profile/gallery/img/" . $_FILES['file']['name'])) {
         echo "<font color='red'>" . $_FILES['file']['name'] . " already exists </font>";
     } else {
         $supported_image = array('jpg', 'jpeg', 'png');

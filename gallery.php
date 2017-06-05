@@ -2,7 +2,7 @@
 session_start();
 $fo = opendir("profile/gallery/img");
 if (array_key_exists('delete_file', $_POST)) {
-    $filename = "profile/gallery/".$_POST['delete_file'];
+    $filename = "profile/gallery/img/".$_POST['delete_file'];
     if (file_exists($filename)) {
         unlink($filename);
         echo 'File '.$filename.' has been deleted';

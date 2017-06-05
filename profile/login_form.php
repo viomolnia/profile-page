@@ -30,7 +30,7 @@ if ($message == "Welcome!") {
         <input type=\"submit\" value=\"Log out\">
         </form>
         
-        <form method=\"POST\" action=\"http://localhost:8085/gallery/index.php\">
+        <form method=\"POST\" action=\"http://localhost:8085/index.php\">
         <input type=\"submit\" value=\"Go to gallery\">
         </form>";
 }
