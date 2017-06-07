@@ -1,7 +1,7 @@
 Homework-1: profile page (html + css) <br>
 
 1. Run profile-page: <br>
-php -S localhost:8080 profile/profile_main <br>
+php -S localhost:8080 profile/profile_main.php <br>
 
 2. Run feedback form: <br>
 php -S localhost:8081 profile/feedback_form.php <br>

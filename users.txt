@@ -1,4 +1,1 @@
-bbb ccc
-bbb xxx
-bbb nnn
-admin vvv
+admin admin admin@profile.php
