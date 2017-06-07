@@ -1,6 +1,6 @@
 <?php
 
-$message = [];
+$messages = [];
 
 $username = $_POST["username"] ?? "";
 $firstName = $_POST["firstname"] ?? "";
@@ -17,13 +17,9 @@ $confirmPassword = $_POST["confirmPassword"] ?? "";
 //print_r("Password: ".$password."<br>");
 //print_r("Confirm password: ".$confirmPassword."<br>");
 
-if ($username === "" || $firstName === "" || $lastName === "" ||
-    $email === "" || $password === "" || $confirmPassword === ""){
-    $message[] = "All Fields are required";
-}
-
-if($password !== $confirmPassword){
-    $message[] = "Passwords should be same";
+if ($username == "" || $firstName == "" || $lastName == "" ||
+    $email == "" || $password == "" || $confirmPassword == ""){
+    $messages[] = "All Fields are required";
 }
 
 $file = fopen("users.txt", "r");
@@ -31,21 +27,25 @@ if ($file) {
     while (($line = fgets($file)) !== false) {
         $line = preg_replace('/[\r\n]+/', "", $line);
         if (isRegistered($line, $username, $email)) {
-            $message[] = "User already exists!";
+            $messages[] = "User already exists!";
         }
     }
     fclose($file);
 } else {
-    $message[] = "Technical error";
+    $messages[] = "Technical error";
 }
 
-if (empty($message)) {
-    $message[] ="Registration successful!";
+if($password !== $confirmPassword){
+    $messages[] = "Passwords should be same";
 }
 
-print_r($message);
+if (empty($messages)) {
+    $messages[] ="Registration successful!";
+}
 
-if ($message[0] === "Registration successful!") {
+print_r($messages);
+
+if ($messages[0] === "Registration successful!") {
     $file = new SplFileObject("users.txt", "a");
     $file->fwrite($username." ".$password." ".$email);
     $file->fwrite("\r\n");
@@ -56,9 +56,10 @@ function isEmailValid(string $email):bool {
 }
 
 function isRegistered(string $line, string $inputUsername, string $inputEmail): bool {
+
     $credentials = explode(" ", $line);
     $registeredUsername =  $credentials[0];
     $registeredEmail = $credentials[2];
 
-    return $registeredUsername == $registeredUsername || $registeredEmail === $registeredEmail;
+    return $registeredUsername == $inputUsername || $registeredEmail == $inputEmail;
 }

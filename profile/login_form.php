@@ -27,11 +27,17 @@ if ($file) {
 echo $message."\n";
 if ($message == "Welcome") {
     echo "<form method=\"POST\" action=\"http://localhost:8084/logout_form.php\">
-        <input type=\"submit\" value=\"Log out\">
-        </form>
+            <input type=\"submit\" value=\"Log out\">
+          </form>
         
         <form method=\"POST\" action=\"http://localhost:8085/index.php\">
-        <input type=\"submit\" value=\"Go to gallery\">
+            <input type=\"submit\" value=\"Go to gallery\">
+        </form>
+
+        <form method=\"post\" action=\"http://localhost:8086/index.php\" enctype=\"multipart/form-data\">
+            choose your image
+            <input type=\"file\" name=\"file\"/><br>
+            <input type=\"submit\" value=\"upload image\" name=\"upd\">
         </form>";
 }
 
@@ -42,7 +48,12 @@ function isRegistered(string $line, string $inputLogin, string $inputPassword): 
     $registeredEmail = $credentials[2];
     $totalInput = $inputLogin." ".$inputPassword;
 
-    return $registeredUsername." ".$registeredPassword == $totalInput || $registeredEmail." ".$registeredPassword == $totalInput;
+    $result = $registeredUsername." ".$registeredPassword == $totalInput || $registeredEmail." ".$registeredPassword == $totalInput;
+
+    if($result) {
+        $_SESSION["user"] = $registeredUsername;
+    }
+    return $result;
 }
 
 function isAdmin(string $login): bool {

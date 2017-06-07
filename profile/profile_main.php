@@ -211,6 +211,7 @@ use classes\User;
                     <td>Confirm password: </td>
                     <td><input type="password" class="demoInputBox" name="confirmPassword" value=""></td>
                 </tr>
+
             </table>
             <input type="submit" name="register-user" value="Register" class="btnRegister">
         </form>
