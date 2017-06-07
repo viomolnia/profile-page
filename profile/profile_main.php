@@ -189,15 +189,19 @@ use classes\User;
             <table border="0" width="500" align="center" class="demo-table">
                 <tr>
                     <td>Username: </td>
-                    <td><input type="text" class="demoInputBox" name="username" value="<?php if(isset($_POST['userName'])) echo $_POST['userName']; ?>"></td>
+                    <td><input type="text" class="demoInputBox" name="username" value="<?php if(isset($_POST['username'])) echo $_POST['username']; ?>"></td>
                 </tr>
                 <tr>
                     <td>First name: </td>
-                    <td><input type="text" class="demoInputBox" name="firstname" value="<?php if(isset($_POST['firstName'])) echo $_POST['firstName']; ?>"></td>
+                    <td><input type="text" class="demoInputBox" name="firstname" value="<?php if(isset($_POST['firstname'])) echo $_POST['firstname']; ?>"></td>
                 </tr>
                 <tr>
                     <td>Last name: </td>
-                    <td><input type="text" class="demoInputBox" name="lastname" value="<?php if(isset($_POST['lastName'])) echo $_POST['lastName']; ?>"></td>
+                    <td><input type="text" class="demoInputBox" name="lastname" value="<?php if(isset($_POST['lastname'])) echo $_POST['lastname']; ?>"></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="text" class="demoInputBox" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>"></td>
                 </tr>
                 <tr>
                     <td>Password: </td>
@@ -214,8 +218,8 @@ use classes\User;
         <form action="http://localhost:8083/login_form.php?test=GET_PARAM" name="frmRegistration" method="post">
             <table border="0" width="500" align="center" class="demo-table">
                 <tr>
-                    <td>Username: </td>
-                    <td><input type="text" class="demoInputBox" name="username" value="<?php if(isset($_POST['userName'])) echo $_POST['userName']; ?>"></td>
+                    <td>Username or e-mail: </td>
+                    <td><input type="text" class="demoInputBox" name="login" value="<?php if(isset($_POST['login'])) echo $_POST['login']; ?>"></td>
                 </tr>
                 <tr>
                     <td>Password: </td>

@@ -19,7 +19,7 @@ while ($file = readdir($fo)) {
 
         echo '<form method="post">';
         echo '<input type="hidden" value="'.$file.'" name="delete_file" />';
-        if ($_SESSION["role"] == UserRole::$ADMIN) echo '<input type="submit" value="Delete image" />';
+        if ($_SESSION["role"] == UserRole::$ADMIN_ROLE) echo '<input type="submit" value="Delete image" />';
         echo '</form>';
     }
 
