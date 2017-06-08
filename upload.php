@@ -1,4 +1,7 @@
 <?php
+include "profile/UserRole.php";
+session_start();
+
 if (isset($_POST['upd'])) {
     if (file_exists("profile/gallery/img/" . $_FILES['file']['name'])) {
         echo "<font color='red'>" . $_FILES['file']['name'] . " already exists </font>";
@@ -15,10 +18,15 @@ if (isset($_POST['upd'])) {
         }
     }
 }
-?>
-<form method="post" enctype="multipart/form-data">
-    choose your image
-    <input type="file" name="file"/><br>
-    <input type="submit" value="upload image" name="upd">
-</form>
+
+if($_SESSION["role"] == UserRole::$ADMIN_ROLE) {
+    echo "<form method='post' enctype='multipart/form-data'>
+        choose your image
+    <input type='file' name='file'/><br>
+    <input type='submit' value='upload image' name='upd'>
+    </form>";
+} else {
+    echo "<font color='red'>You have mo rights to upload pictures</font>";
+}
+
 
