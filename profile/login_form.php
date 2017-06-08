@@ -34,7 +34,7 @@ if ($message == "Welcome") {
             <input type=\"submit\" value=\"Go to gallery\">
         </form>
 
-        <form method=\"post\" action=\"http://localhost:8086/index.php\" enctype=\"multipart/form-data\">
+        <form method=\"post\" action=\"http://localhost:8086/upload_profile_pic.php\" enctype=\"multipart/form-data\">
             choose your image
             <input type=\"file\" name=\"file\"/><br>
             <input type=\"submit\" value=\"upload image\" name=\"upd\">
@@ -51,7 +51,7 @@ function isRegistered(string $line, string $inputLogin, string $inputPassword): 
     $result = $registeredUsername." ".$registeredPassword == $totalInput || $registeredEmail." ".$registeredPassword == $totalInput;
 
     if($result) {
-        $_SESSION["user"] = $registeredUsername;
+        $_SESSION["username"] = $registeredUsername;
     }
     return $result;
 }
