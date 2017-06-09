@@ -17,6 +17,3 @@ php -S localhost:8084 profile/logout_form.php <br>
 
 6. Run gallery: <br>
 php -S localhost:8085 -d ./ <br>
-
-7. Run user picture upload: <br>
-php -S localhost:8086 profile/upload_profile_pic.php
