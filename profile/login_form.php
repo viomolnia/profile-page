@@ -1,8 +1,10 @@
 <?php
 include "UserRole.php";
+include "AlertMessage.php";
+
 session_start();
 
-$message = "Login or password incorrect!";
+$message = AlertMessage::$INCORRECT_LOG_PASS;
 $login = $_POST["login"] ?? "";
 $password = $_POST["password"] ?? "";
 
@@ -11,7 +13,7 @@ if ($file) {
     while (($line = fgets($file)) !== false) {
         $line = preg_replace('/[\r\n]+/', "", $line);
         if (isRegistered($line, $login, $password)) {
-            $message = "Welcome";
+            $message = AlertMessage::$WELCOME_MSG;
             $_SESSION['role'] = UserRole::$USER_ROLE;
 
             if (isAdmin($login)) {
@@ -21,23 +23,17 @@ if ($file) {
     }
     fclose($file);
 } else {
-    $message = "Technical error";
+    $message = AlertMessage::$TECH_ERR;
 }
 
 echo $message."\n";
-if ($message == "Welcome") {
+if ($message == AlertMessage::$WELCOME_MSG) {
     echo "<form method=\"POST\" action=\"http://localhost:8084/logout_form.php\">
             <input type=\"submit\" value=\"Log out\">
           </form>
         
         <form method=\"POST\" action=\"http://localhost:8085/index.php\">
             <input type=\"submit\" value=\"Go to gallery\">
-        </form>
-
-        <form method=\"post\" action=\"http://localhost:8086/upload_profile_pic.php\" enctype=\"multipart/form-data\">
-            choose your image
-            <input type=\"file\" name=\"file\"/><br>
-            <input type=\"submit\" value=\"upload image\" name=\"upd\">
         </form>";
 }
 

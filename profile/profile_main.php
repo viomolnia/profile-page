@@ -185,7 +185,7 @@ use classes\User;
             <input class="btn btn-primary" type="reset" value="Reset">
         </form>
 
-        <form action="http://localhost:8082/registration_form.php?test=GET_PARAM" name="frmRegistration" method="post">
+        <form action="http://localhost:8082/registration_form.php?test=GET_PARAM" name="frmRegistration" enctype="multipart/form-data" method="post">
             <table border="0" width="500" align="center" class="demo-table">
                 <tr>
                     <td>Username: </td>
@@ -211,7 +211,10 @@ use classes\User;
                     <td>Confirm password: </td>
                     <td><input type="password" class="demoInputBox" name="confirmPassword" value=""></td>
                 </tr>
-
+                <tr>
+                    <td>Choose your image: </td>
+                    <td><input type="file" name="file"/></td>
+                </tr>
             </table>
             <input type="submit" name="register-user" value="Register" class="btnRegister">
         </form>

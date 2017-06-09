@@ -1,7 +1,6 @@
 <?php
 
-class UserRole
-{
+class UserRole {
     public static $ADMIN_ROLE = "ADMIN";
     public static $USER_ROLE = "USER";
 

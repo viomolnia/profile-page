@@ -26,7 +26,7 @@ if($_SESSION["role"] == UserRole::$ADMIN_ROLE) {
     <input type='submit' value='upload image' name='upd'>
     </form>";
 } else {
-    echo "<font color='red'>You have mo rights to upload pictures</font>";
+    echo "<font color='#dd4444'>You have no rights to upload pictures</font>";
 }
 
 
